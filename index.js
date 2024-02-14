@@ -1,13 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let targetSum = false
+  for (let i = 0; i <= array.length; i++) {
+    if (array.includes(target - array[i]) && array.indexOf(target - array[i]) !== i){
+      return true
+    }
+  }
+
+  return false
+
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
   Add your pseudocode here
+iterate over array 
+  if the array includes the difference of target minue the array at index of i and the difference does not = i
+    return true
+  else
+    return false
+
 */
 
 /*
